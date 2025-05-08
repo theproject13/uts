@@ -70,6 +70,18 @@
       align-items: center;
       justify-content: center;
     }
+
+    .audio-btn {
+      background-color: white;
+      color: #007BFF;
+      border: none;
+      border-radius: 50%;
+      font-size: 24px;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      justify-content: center;
+    }
     </style>
 </head>
 <body>
@@ -84,7 +96,31 @@
           <li><a href="https://theiqbalproject13.blogspot.com/p/about-me.html" target="kanan">About</a></li>
           <li><a href="https://theiqbalproject13.blogspot.com/" target="kanan">Blog</a></li>
           <!-- <li><a href="#">Contact</a></li> -->
+          <audio id="bgAudio" autoplay loop>
+            <source src="assets/gentle-rain-for-relaxation-and-sleep-337279.mp3" type="audio/mp3">
+            Browser Anda tidak mendukung pemutar audio.
+          </audio>
+        
+          <!-- Tombol On/Off -->
+          <button id="audioToggle" class="audio-btn">🔊</button>
         </ul>
       </div>
+
+     
+    
+      <script>
+        const audio = document.getElementById('bgAudio');
+        const toggleBtn = document.getElementById('audioToggle');
+    
+        toggleBtn.addEventListener('click', () => {
+          if (audio.paused) {
+            audio.play();
+            toggleBtn.textContent = '🔊';
+          } else {
+            audio.pause();
+            toggleBtn.textContent = '🔇';
+          }
+        });
+      </script>
 </body>
 </html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Video Wisata Terfavorit di Sekitar Bandung</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f4f4f4;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      margin: 15px;
+      width: 320px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .video-wrapper {
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 aspect ratio */
+      height: 0;
+      overflow: hidden;
+    }
+
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .card-content {
+      padding: 15px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .card-content h3 {
+      margin: 0 0 10px 0;
+      color: #333;
+    }
+
+    .card-content p {
+      margin: 0 0 15px 0;
+      color: #666;
+      flex: 1;
+    }
+
+    .card-content a {
+      align-self: flex-start;
+      padding: 10px 15px;
+      background-color: #007BFF;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+      transition: background-color 0.2s;
+    }
+
+    .card-content a:hover {
+      background-color: #0056b3;
+    }
+
+    @media (max-width: 768px) {
+      .card {
+        width: 100%;
+        max-width: 400px;
+      }
+
+      .card-content h3 {
+        font-size: 18px;
+      }
+
+      .card-content p {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Video Wisata Terfavorit di Sekitar Bandung</h1>
+
+    <!-- Card 1: Jalan Braga (Kuliner) -->
+    <div class="card">
+      <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/embed/2eKqE22UzpM?rel=0&modestbranding=1" 
+                title="Jalan Braga Bandung Vlog" 
+                allowfullscreen></iframe>
+      </div>
+      <div class="card-content">
+        <h3>Jalan Braga (Kuliner)</h3>
+        <p>Kawasan bersejarah dengan kafe, restoran, dan street food seperti sate dan roti bakar, populer untuk suasana malam hari.</p>
+        <a href="https://www.youtube.com/watch?v=2eKqE22UzpM" target="_blank">Tonton di YouTube</a>
+      </div>
+    </div>
+
+    <!-- Card 2: Situ Patenggang (Bahari) -->
+    <div class="card">
+      <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/embed/QzZ6zZ5Z5Zw?rel=0&modestbranding=1" 
+                title="Situ Patenggang Ciwidey Vlog" 
+                allowfullscreen></iframe>
+      </div>
+      <div class="card-content">
+        <h3>Situ Patenggang (Bahari)</h3>
+        <p>Danau indah di Ciwidey dengan pemandangan pegunungan, ideal untuk naik perahu dan bersantai.</p>
+        <a href="https://www.youtube.com/watch?v=QzZ6zZ5Z5Zw" target="_blank">Tonton di YouTube</a>
+      </div>
+    </div>
+
+    <!-- Card 3: Museum Konferensi Asia Afrika (Museum) -->
+    <div class="card">
+      <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/embed/8z7yZ5Z5Z5w?rel=0&modestbranding=1" 
+                title="Museum Konferensi Asia Afrika Tour" 
+                allowfullscreen></iframe>
+      </div>
+      <div class="card-content">
+        <h3>Museum Konferensi Asia Afrika</h3>
+        <p>Museum bersejarah yang memperingati Konferensi Asia Afrika 1955, dengan koleksi foto dan artefak.</p>
+        <a href="https://www.youtube.com/watch?v=8z7yZ5Z5Z5w" target="_blank">Tonton di YouTube</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
