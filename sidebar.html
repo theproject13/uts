@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Protest+Revolution&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap">
+<style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, "Source Code Pro", monospace;
+    }
+
+    .container {
+      display: flex;
+      min-height: 100dvh;
+    }
+
+    .sidebar {
+      width: 500px;
+      color: #003d99;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1rem;
+      margin-top: 2rem;
+      background: #fff;
+    }
+
+    .logout-btn {
+      background-color: transparent;
+      font-weight: 800;
+      font-family: monospace;
+      font-size: 18px;
+      border: 0.15rem solid red; /* Changed to rem for responsiveness */
+      color: red;
+      padding: 0.7rem 1.5rem;
+      margin: 2rem 0;
+      cursor: pointer;
+      border-radius: 15px;
+      width: 70%;
+    }
+
+    .logout-btn:hover {
+      background-color: red;
+      color: white;
+    }
+
+    .nav-links {
+      margin-top: 5%;
+      list-style: none;
+      padding: 0;
+      width: 100%;
+      font-weight: 700;
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+
+    .nav-links li {
+      width: 100%;
+    }
+
+    .nav-links a {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      text-decoration: none;
+      color: black;
+      border-bottom: 1px solid #ccc;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .nav-links a:hover {
+      background-color: #f0f0f0;
+      color: #000;
+    }
+
+    </style>
+    </head>
+    <body>
+      <div class="container">
+        <div class="sidebar">
+          <button class="logout-btn">SignIn</button>
+          <ul class="nav-links">
+            <li><a href="museum.html" target="kanan">Museum </a></li>
+            <li><a href="wisatabahari.html"target="kanan">Wisata Bahari</a></li>
+            <li><a href="wisataalam.html"target="kanan">Wisata Alam</a></li>
+            <li><a href="wisatakuliner.htm"target="kanan">WisataKuliner</a></li>
+          </ul>
+        </div>
+    </div>
+    </body>
+    </html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Museum di Indonesia</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+
+.card {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  margin: 15px;
+  width: 300px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 15px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-content h3 {
+  margin: 0 0 10px 0;
+}
+
+.card-content p {
+  flex: 1;
+  margin: 0 0 15px 0;
+}
+
+.card-content a {
+  align-self: flex-start;
+  padding: 10px 15px;
+  background-color: #007BFF;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.card-content a:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 100%;
+    max-width: 500px;
+  }
+}
+</style>
+<body>
+
+  <!-- Navigasi -->
+  <nav>
+    <ul>
+      <li><a href="museum.html">Museum</a></li>
+      <li><a href="wisata-alam.html">Wisata Alam</a></li>
+      <li><a href="wisata-bahari.html">Wisata Bahari</a></li>
+      <li><a href="wisata-kuliner.html">Wisata Kuliner</a></li>
+    </ul>
+  </nav>
+
+  <!-- Konten -->
+  <div class="container">
+    <!-- Kartu 1 -->
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Museum_Nasional_November_2016.jpg" alt="Museum Nasional Indonesia">
+      <div class="card-content">
+        <h3>Museum Nasional Indonesia</h3>
+        <p>Terletak di Jakarta, museum ini menyimpan lebih dari 140.000 koleksi bersejarah dari seluruh nusantara.</p>
+        <a href="https://www.tripadvisor.co.id/Attraction_Review-g294229-d379313-Reviews-National_Museum-Jakarta_Java.html" target="_blank">Kunjungi</a>
+      </div>
+    </div>
+
+    <!-- Kartu 2 -->
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Museum_Indonesia_TMII.jpg" alt="Museum Indonesia TMII">
+      <div class="card-content">
+        <h3>Museum Indonesia TMII</h3>
+        <p>Menampilkan kekayaan budaya Indonesia melalui berbagai pakaian adat, rumah tradisional, dan artefak budaya lainnya.</p>
+        <a href="https://tamanmini.com/taman_jelajah_indonesia/en/museum/museum-indonesia/" target="_blank">Kunjungi</a>
+      </div>
+    </div>
+
+    <!-- Kartu 3 -->
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Tsunami_Museum_Banda_Aceh.jpg" alt="Museum Tsunami Aceh">
+      <div class="card-content">
+        <h3>Museum Tsunami Aceh</h3>
+        <p>Didirikan sebagai peringatan tragedi tsunami 2004, museum ini juga berfungsi sebagai pusat edukasi dan evakuasi.</p>
+        <a href="https://authentic-indonesia.com/blog/11-best-indonesia-museums-to-visit/" target="_blank">Kunjungi</a>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

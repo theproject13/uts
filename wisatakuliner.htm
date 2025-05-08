@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Wisata Kuliner di Indonesia</title>
+  <link rel="stylesheet" href="style.css" />
+  /* style.css */
+  <style>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+
+.card {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  margin: 15px;
+  width: 300px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 15px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-content h3 {
+  margin: 0 0 10px 0;
+}
+
+.card-content p {
+  flex: 1;
+  margin: 0 0 15px 0;
+}
+
+.card-content a {
+  align-self: flex-start;
+  padding: 10px 15px;
+  background-color: #007BFF;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.card-content a:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 100%;
+    max-width: 500px;
+}
+}
+</style>
+</head>
+<body>
+
+
+
+  <!-- Konten -->
+  <div class="container">
+    <!-- Kartu 1 -->
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Gudeg_Yogyakarta.jpg" alt="Gudeg Yogyakarta" />
+      <div class="card-content">
+        <h3>Gudeg, Yogyakarta</h3>
+        <p>Gudeg adalah makanan khas Yogyakarta yang terbuat dari nangka muda yang dimasak dengan santan dan rempah-rempah khas, menghasilkan rasa manis dan gurih yang lezat.</p>
+        <a href="https://kemenparekraf.go.id/ragam-ekonomi-kreatif/20-Destinasi-Wisata-Kuliner-di-Indonesia" target="_blank">Kunjungi</a>
+      </div>
+    </div>
+
+    <!-- Kartu 2 -->
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Pempek_Palembang.jpg" alt="Pempek Palembang" />
+      <div class="card-content">
+        <h3>Pempek, Palembang</h3>
+        <p>Pempek adalah makanan khas Palembang yang terbuat dari ikan dan sagu, disajikan dengan kuah cuko yang asam dan pedas, memberikan cita rasa yang khas dan menggugah selera.</p>
+        <a href="https://www.detik.com/jabar/kuliner/d-6263344/20-nama-makanan-khas-indonesia-dan-daerah-asalnya" target="_blank">Kunjungi</a>
+      </div>
+    </div>
+
+    <!-- Kartu 3 -->
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Rendang_Padang.jpg" alt="Rendang Padang" />
+      <div class="card-content">
+        <h3>Rendang, Padang</h3>
+        <p>Rendang adalah masakan daging khas Padang yang dimasak dengan santan dan rempah-rempah hingga kering, menghasilkan rasa yang kaya dan tekstur yang empuk.</p>
+        <a href="https://food.detik.com/info-kuliner/d-6740657/37-makanan-khas-indonesia-bahan-dasar-dan-asal-daerahnya" target="_blank">Kunjungi</a>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

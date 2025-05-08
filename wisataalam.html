@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Wisata Alam di Indonesia</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* style.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+
+.card {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  margin: 15px;
+  width: 300px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 15px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-content h3 {
+  margin: 0 0 10px 0;
+}
+
+.card-content p {
+  flex: 1;
+  margin: 0 0 15px 0;
+}
+
+.card-content a {
+  align-self: flex-start;
+  padding: 10px 15px;
+  background-color: #007BFF;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.card-content a:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 100%;
+    max-width: 500px;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- Konten -->
+  <div class="container">
+    <!-- Kartu 1 -->
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Mount_Bromo_in_East_Java.jpg" alt="Gunung Bromo" />
+      <div class="card-content">
+        <h3>Gunung Bromo, Jawa Timur</h3>
+        <p>Gunung Bromo menawarkan pemandangan matahari terbit yang menakjubkan dan lautan pasir yang luas, menjadikannya destinasi favorit para pendaki dan fotografer.</p>
+        <a href="https://anekatempatwisata.com/10-tempat-wisata-alam-di-indonesia-yang-wajib-dikunjungi/" target="_blank">Kunjungi</a>
+      </div>
+    </div>
+
+    <!-- Kartu 2 -->
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Toba_Lake_view.jpg" alt="Danau Toba" />
+      <div class="card-content">
+        <h3>Danau Toba, Sumatera Utara</h3>
+        <p>Danau vulkanik terbesar di Asia Tenggara ini menawarkan keindahan alam yang memukau dan budaya Batak yang kaya di sekitarnya.</p>
+        <a href="https://anekatempatwisata.com/10-tempat-wisata-alam-di-indonesia-yang-wajib-dikunjungi/" target="_blank">Kunjungi</a>
+      </div>
+    </div>
+
+    <!-- Kartu 3 -->
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Wakatobi_National_Park.jpg" alt="Taman Nasional Wakatobi" />
+      <div class="card-content">
+        <h3>Taman Nasional Wakatobi, Sulawesi Tenggara</h3>
+        <p>Terkenal dengan keanekaragaman hayati lautnya, Wakatobi adalah surga bagi penyelam dengan terumbu karang yang masih alami.</p>
+        <a href="https://www.traveloka.com/id-id/explore/destination/keindahan-alam-indonesia-yang-mendunia-acc/19116" target="_blank">Kunjungi</a>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

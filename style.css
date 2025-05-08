@@ -1,0 +1,156 @@
+/* Responsive Design */
+@media (max-width: 1024px) { /* Tablet */
+    .sidebar {
+      width: 300px;
+      padding: 0.5rem;
+      margin-top: 1rem;
+    }
+
+    .logout-btn {
+      font-size: 16px;
+      padding: 0.5rem 1rem;
+      margin: 1.5rem 0;
+      border: 0.12rem solid red;
+    }
+
+    .nav-links {
+      margin-top: 3%;
+    }
+
+    .nav-links a {
+      padding: 8px;
+      font-size: 14px;
+    }
+
+    .navbar {
+      gap: 1rem;
+    }
+
+    .navbar a {
+      font-size: 14px;
+      padding: 0.4rem;
+    }
+
+    .navbar a:hover {
+      border: 0.12rem solid blue;
+    }
+
+    .search-input {
+      font-size: 12px;
+      padding: 0.4rem;
+    }
+
+    .search-btn-header {
+      padding: 0.4rem;
+    }
+
+    .item .content {
+      left: 30px;
+      max-width: 50%;
+      padding: 0.8rem 1rem;
+    }
+
+    .thumbnail {
+      width: 80px;
+      height: 48px;
+    }
+  }
+
+  @media (max-width: 768px) { /* Mobile */
+    .container {
+      flex-direction: column;
+    }
+
+    .sidebar {
+      width: 100%;
+      margin-top: 0;
+      padding: 1rem;
+      align-items: flex-start;
+      min-height: auto;
+    }
+
+    .logout-btn {
+      width: 100%;
+      font-size: 14px;
+      padding: 0.5rem;
+      margin: 1rem 0;
+      border: 0.1rem solid red;
+    }
+
+    .nav-links {
+      margin-top: 0;
+    }
+
+    .nav-links a {
+      font-size: 12px;
+      padding: 6px;
+    }
+
+    .main-content {
+      width: 100%;
+    }
+
+    .header {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .navbar {
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .navbar a {
+      font-size: 12px;
+      padding: 0.3rem;
+    }
+
+    .navbar a:hover {
+      border: 0.1rem solid blue;
+    }
+
+    .search-container {
+      width: 100%;
+      justify-content: center;
+      margin-top: 0.5rem;
+    }
+
+    .search-input {
+      width: 70%;
+      font-size: 12px;
+      padding: 0.3rem;
+    }
+
+    .search-btn-header {
+      padding: 0.3rem;
+    }
+
+    .slider {
+      height: calc(100vh - 150px);
+    }
+
+    .item .content {
+      left: 20px;
+      max-width: 70%;
+      padding: 0.6rem 0.8rem;
+      font-size: 12px;
+    }
+
+    .search-btn {
+      padding: 0.4rem 0.8rem;
+      font-size: 12px;
+    }
+
+    .thumbnail-container {
+      bottom: 10px;
+      gap: 5px;
+    }
+
+    .thumbnail {
+      width: 60px;
+      height: 36px;
+    }
+  }

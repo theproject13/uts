@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Protest+Revolution&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap">
+  <style>
+    .main-content {
+      flex-grow: 1;
+      position: relative;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .navbar {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      padding: 0;
+      margin: 0;
+      gap: 2rem;
+      width: 100%;
+      font-weight: 700;
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+
+    .navbar a {
+      text-decoration: none;
+      color: #000;
+      padding: 0.5rem;
+      transition: border 0.3s, color 0.3s;
+    }
+
+    .navbar a:hover {
+      border: 0.15rem solid blue; /* Changed to rem for responsiveness */
+      color: blue;
+      border-radius: 25px;
+    }
+
+    .logo {
+      font-family: monospace;
+      font-weight: 900;
+      font-size: 1.5rem;
+    }
+
+    .slider {
+      width: 100%;
+      height: calc(100vh - 80px);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .list {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .item {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      flex-shrink: 0;
+    }
+
+    .item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .item .content {
+      position: absolute;
+      top: 50%;
+      left: 50px;
+      transform: translateY(-50%);
+      color: white;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 1rem 1.5rem;
+      border-radius: 8px;
+      max-width: 40%;
+      z-index: 2;
+      text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+    }
+
+    .search-btn {
+      background-color: #00cc00;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 1rem;
+    }
+
+    .thumbnail-container {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 10px;
+      z-index: 3;
+    }
+
+    .thumbnail {
+      width: 100px;
+      height: 60px;
+      object-fit: cover;
+      border: 2px solid transparent;
+      cursor: pointer;
+      transition: border 0.3s;
+    }
+
+    .thumbnail.active {
+      border: 2px solid #00cc00;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 1024px) { /* Tablet */
+      .sidebar {
+        width: 300px;
+        padding: 0.5rem;
+        margin-top: 1rem;
+      }
+
+      .logout-btn {
+        font-size: 16px;
+        padding: 0.5rem 1rem;
+        margin: 1.5rem 0;
+        border: 0.12rem solid red; /* Adjusted border for smaller text */
+      }
+
+      .nav-links {
+        margin-top: 3%;
+      }
+
+      .nav-links a {
+        padding: 8px;
+        font-size: 14px;
+      }
+
+      .navbar {
+        gap: 1rem;
+      }
+
+      .navbar a {
+        font-size: 14px;
+        padding: 0.4rem;
+      }
+
+      .navbar a:hover {
+        border: 0.12rem solid blue; /* Adjusted border for smaller text */
+      }
+
+      .item .content {
+        left: 30px;
+        max-width: 50%;
+        padding: 0.8rem 1rem;
+      }
+
+      .thumbnail {
+        width: 80px;
+        height: 48px;
+      }
+    }
+
+    @media (max-width: 768px) { /* Mobile */
+      .container {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        width: 100%;
+        margin-top: 0;
+        padding: 1rem;
+        align-items: flex-start;
+        min-height: auto;
+      }
+
+      .logout-btn {
+        width: 100%;
+        font-size: 14px;
+        padding: 0.5rem;
+        margin: 1rem 0;
+        border: 0.1rem solid red; /* Adjusted border for smaller text */
+      }
+
+      .nav-links {
+        margin-top: 0;
+      }
+
+      .nav-links a {
+        font-size: 12px;
+        padding: 6px;
+      }
+
+      .main-content {
+        width: 100%;
+      }
+
+      .header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .navbar {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .navbar a {
+        font-size: 12px;
+        padding: 0.3rem;
+      }
+
+      .navbar a:hover {
+        border: 0.1rem solid blue; /* Adjusted border for smaller text */
+      }
+
+      .slider {
+        height: calc(100vh - 150px);
+      }
+
+      .item .content {
+        left: 20px;
+        max-width: 70%;
+        padding: 0.6rem 0.8rem;
+        font-size: 12px;
+      }
+
+      .search-btn {
+        padding: 0.4rem 0.8rem;
+        font-size: 12px;
+      }
+
+      .thumbnail-container {
+        bottom: 10px;
+        gap: 5px;
+      }
+
+      .thumbnail {
+        width: 60px;
+        height: 36px;
+      }
+    }
+  </style>
+</head>
+<body>
+      <div class="slider">
+        <div class="list">
+          <div class="item">
+            <img src="/assets/image3.jpg" alt="Slide 1">
+            <div class="content">
+                <h2>Explore Orchid Forest Cikole</h2>
+                <p>Discover a magical blend of pine forests and orchid gardens in Lembang. Walk across the iconic suspension bridge, enjoy Instagram-worthy photo spots, and experience the enchanting night ambiance with glowing lights.</p>
+                <button class="search-btn" data-search="Orchid Forest Cikole"><i class="fas fa-search"></i> Search Now</button>
+            </div>
+          </div>
+          <div class="item">
+            <img src="/assets/image1.jpg" alt="Slide 2">
+            <div class="content">
+                <h2>Marvel at Kawah Putih Ciwidey</h2>
+                <p>Visit this stunning volcanic crater lake in Ciwidey, known for its surreal white-green waters and misty surroundings. A perfect spot for nature lovers and photographers seeking breathtaking views.</p>
+                <button class="search-btn" data-search="Kawah Putih Ciwidey"><i class="fas fa-search"></i> Search Now</button>
+            </div>
+          </div>
+          <div class="item">
+            <img src="/assets/image2.jpg" alt="Slide 3">
+            <div class="content">
+                <h2>Experience Floating Market Lembang</h2>
+                <p>Enjoy a unique culinary adventure at this floating market in Lembang. Savor local delicacies from boats, ride the Rainbow Slide, and capture fun moments at vibrant photo spots surrounded by nature.</p>
+                <button class="search-btn" data-search="Floating Market Lembang"><i class="fas fa-search"></i> Search
+            </div>
+          </div>
+        </div>
+        <div class="thumbnail-container">
+          <img class="thumbnail active" src="/assets/image3.jpg" alt="Thumb 1">
+          <img class="thumbnail" src="/assets/image1.jpg" alt="Thumb 2">
+          <img class="thumbnail" src="/assets/image2.jpg" alt="Thumb 3">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const sliderList = document.querySelector('.list');
+    const items = document.querySelectorAll('.item');
+    const thumbnails = document.querySelectorAll('.thumbnail');
+    let currentIndex = 0;
+    const totalItems = items.length;
+
+    function updateSlider(index) {
+      sliderList.style.transform = `translateX(-${index * 100}%)`;
+      thumbnails.forEach(thumb => thumb.classList.remove('active'));
+      thumbnails[index].classList.add('active');
+      currentIndex = index;
+    }
+
+    function autoSlide() {
+      currentIndex = (currentIndex + 1) % totalItems;
+      updateSlider(currentIndex);
+    }
+
+    thumbnails.forEach((thumb, index) => {
+      thumb.addEventListener('click', () => {
+        updateSlider(index);
+        clearInterval(autoSlideInterval);
+        autoSlideInterval = setInterval(autoSlide, 3000);
+      });
+    });
+
+    let autoSlideInterval = setInterval(autoSlide, 3000);
+
+    // Swipe support for touch devices
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    sliderList.addEventListener('touchstart', e => {
+      touchStartX = e.changedTouches[0].screenX;
+    });
+
+    sliderList.addEventListener('touchend', e => {
+      touchEndX = e.changedTouches[0].screenX;
+      if (touchStartX - touchEndX > 50) {
+        currentIndex = (currentIndex + 1) % totalItems;
+      } else if (touchEndX - touchStartX > 50) {
+        currentIndex = (currentIndex - 1 + totalItems) % totalItems;
+      }
+      updateSlider(currentIndex);
+      clearInterval(autoSlideInterval);
+      autoSlideInterval = setInterval(autoSlide, 3000);
+    });
+  </script>
+</body>
+</html>
